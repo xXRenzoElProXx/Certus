@@ -1,18 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario de Consultas</title>
+    <style>
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=tel],
+        input[type=number],
+        select,
+        textarea {
+            width: calc(100% - 12px);
+            padding: 6px;
+            margin: 6px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 
 <body>
-    <main>
-        <form action="">
-
-        </form>
-    </main>
+    <center>
+        <h1>Formulario de Consultas</h1>
+    </center>
+    <table>
+        <tr>
+            <td colspan="2"><strong>DATOS PERSONALES</strong></td>
+        </tr>
+        <tr>
+            <td>Nombre:</td>
+            <td><input type="text" id="nombre" name="nombre" required></td>
+        </tr>
+        <tr>
+            <td>Apellidos:</td>
+            <td><input type="text" id="apellidos" name="apellidos" required></td>
+        </tr>
+        <tr>
+            <td>DNI:</td>
+            <td><input type="number" maxlength="8" minlength="8" id="dni" name="dni" required></td>
+        </tr>
+        <tr>
+            <td>Celular:</td>
+            <td><input type="number" maxlength="9" minlength="9" id="celular" name="celular" required></td>
+        </tr>
+        <tr>
+            <td>Correo:</td>
+            <td><input type="email" id="correo" name="correo" required></td>
+        </tr>
+        <tr>
+            <td>Dirección:</td>
+            <td><input type="text" id="direccion" name="direccion" required></td>
+        </tr>
+        <tr>
+            <td>Departamento:</td>
+            <td>
+                <select id="departamento" name="departamento">
+                    <option value="lima">Lima</option>
+                    <option value="arequipa">Arequipa</option>
+                    <option value="cusco">Cusco</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Concesionario:</td>
+            <td>
+                <select id="concesionario" name="concesionario">
+                    <option value="concesionario1">Concesionario 1</option>
+                    <option value="concesionario2">Concesionario 2</option>
+                    <option value="concesionario3">Concesionario 3</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Motivo de Consulta:</td>
+            <td>
+                <select id="motivo" name="motivo">
+                    <option value="consulta_general">Consulta General</option>
+                    <option value="reclamo">Reclamo</option>
+                    <option value="solicitud_cita">Solicitud de Cita</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><strong>DATOS DEL VEHÍCULO</strong></td>
+        </tr>
+        <tr>
+            <td>Placa:</td>
+            <td><input type="text" id="placa" name="placa" required></td>
+        </tr>
+        <tr>
+            <td>Propietario:</td>
+            <td><input type="text" id="propietario" name="propietario" required></td>
+        </tr>
+        <tr>
+            <td>Marca del Vehículo:</td>
+            <td>
+                <select id="marca" name="marca">
+                    <option value="toyota">Toyota</option>
+                    <option value="honda">Honda</option>
+                    <option value="nissan">Nissan</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Descripción de la Consulta:</td>
+            <td><textarea id="descripcion" name="descripcion" rows="4" required></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="submit">Enviar Consulta</button></td>
+        </tr>
+    </table>
 </body>
 
 </html>
